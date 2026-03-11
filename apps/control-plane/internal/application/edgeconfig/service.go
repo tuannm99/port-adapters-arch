@@ -2,15 +2,21 @@ package edgeconfig
 
 import "context"
 
-type Service struct {
+var _ EdgeConfigUseCase = (*EdgeService)(nil)
+
+type EdgeConfigUseCase interface {
+	BuildWebsiteConfig(ctx context.Context, domain, upstream string) (string, error)
+}
+
+type EdgeService struct {
 	renderer Renderer
 }
 
-func NewService(renderer Renderer) *Service {
-	return &Service{renderer: renderer}
+func NewEdgeService(renderer Renderer) *EdgeService {
+	return &EdgeService{renderer: renderer}
 }
 
-func (s *Service) BuildWebsiteConfig(
+func (s *EdgeService) BuildWebsiteConfig(
 	ctx context.Context,
 	domain string,
 	upstream string,

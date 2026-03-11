@@ -1,4 +1,4 @@
-.PHONY: run-control-plane run-agent run-demo tidy
+.PHONY: run-control-plane run-agent run-demo tidy mocks test
 
 run-control-plane:
 	go run ./apps/control-plane/cmd/server
@@ -8,6 +8,12 @@ run-agent:
 
 run-demo:
 	go run ./apps/demo-app/cmd/demo
+
+mocks:
+	cd apps/control-plane && mockery --config mockery.yaml
+
+test:
+	cd apps/control-plane && go test ./...
 
 tidy:
 	cd apps/control-plane && go mod tidy

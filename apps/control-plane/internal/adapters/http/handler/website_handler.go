@@ -11,13 +11,13 @@ import (
 )
 
 type WebsiteHandler struct {
-	websiteService    *websiteapp.Service
-	edgeConfigService *edgeconfig.Service
+	websiteService    websiteapp.WebsiteUseCase
+	edgeConfigService edgeconfig.EdgeConfigUseCase
 }
 
 func NewWebsiteHandler(
-	websiteService *websiteapp.Service,
-	edgeConfigService *edgeconfig.Service,
+	websiteService websiteapp.WebsiteUseCase,
+	edgeConfigService edgeconfig.EdgeConfigUseCase,
 ) *WebsiteHandler {
 	return &WebsiteHandler{
 		websiteService:    websiteService,

@@ -1,0 +1,22 @@
+template: testify
+
+packages:
+  github.com/tuannm99/edge-platform/apps/control-plane/internal/application/website:
+    config:
+      dir: '{{.InterfaceDir}}/mocks'
+      filename: 'mock_{{.InterfaceName}}.go'
+      structname: 'Mock{{.InterfaceName}}'
+      pkgname: 'mocks'
+    interfaces:
+      Repository:
+      WebsiteUseCase:
+
+  github.com/tuannm99/edge-platform/apps/control-plane/internal/application/edgeconfig:
+    config:
+      dir: '{{.InterfaceDir}}/mocks'
+      filename: 'mock_{{.InterfaceName}}.go'
+      structname: 'Mock{{.InterfaceName}}'
+      pkgname: 'mocks'
+    interfaces:
+      Renderer:
+      EdgeConfigUseCase:

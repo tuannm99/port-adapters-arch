@@ -9,30 +9,28 @@ import (
 	"github.com/tuannm99/edge-platform/apps/control-plane/internal/domain/website"
 )
 
-//	type ConfigGenerator interface {
-//		Generate(cfg nginxconf.ServerConfig) (string, error)
-//	}
+var _ WebsiteUseCase = (*WebsiteService)(nil)
 
-type Repository interface {
-	Create(ctx context.Context, w website.Website) error
+type WebsiteUseCase interface {
+	Create(ctx context.Context, in CreateInput) (website.Website, error)
 	List(ctx context.Context) ([]website.Website, error)
 	GetByID(ctx context.Context, id string) (website.Website, error)
 }
 
 type CreateInput struct {
-	Domain   string `json:"domain"`
-	Upstream string `json:"upstream"`
+	Domain   string
+	Upstream string
 }
 
-type Service struct {
+type WebsiteService struct {
 	repo Repository
 }
 
-func NewService(repo Repository) *Service {
-	return &Service{repo: repo}
+func NewWebsiteService(repo Repository) *WebsiteService {
+	return &WebsiteService{repo: repo}
 }
 
-func (s *Service) Create(ctx context.Context, in CreateInput) (website.Website, error) {
+func (s *WebsiteService) Create(ctx context.Context, in CreateInput) (website.Website, error) {
 	if in.Domain == "" {
 		return website.Website{}, fmt.Errorf("domain is required")
 	}
@@ -53,10 +51,10 @@ func (s *Service) Create(ctx context.Context, in CreateInput) (website.Website, 
 	return w, nil
 }
 
-func (s *Service) List(ctx context.Context) ([]website.Website, error) {
+func (s *WebsiteService) List(ctx context.Context) ([]website.Website, error) {
 	return s.repo.List(ctx)
 }
 
-func (s *Service) GetByID(ctx context.Context, id string) (website.Website, error) {
+func (s *WebsiteService) GetByID(ctx context.Context, id string) (website.Website, error) {
 	return s.repo.GetByID(ctx, id)
 }

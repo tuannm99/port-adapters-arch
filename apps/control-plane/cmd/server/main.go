@@ -15,13 +15,13 @@ import (
 
 func main() {
 	store := memory.NewWebsiteStore()
-	websiteService := websiteapp.NewService(store)
+	websiteService := websiteapp.NewWebsiteService(store)
 
 	gen, err := nginxconf.NewGenerator()
 	if err != nil {
 		log.Fatal(err)
 	}
-	edgeConfigService := edgeconfig.NewService(gen)
+	edgeConfigService := edgeconfig.NewEdgeService(gen)
 
 	websiteHandler := handler.NewWebsiteHandler(websiteService, edgeConfigService)
 	httpHandler := router.New(websiteHandler)
