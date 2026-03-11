@@ -1,0 +1,8 @@
+go 1.25.1
+
+use (
+	./apps/control-plane
+	./apps/agent
+	./apps/demo-app
+	./packages/shared
+)
