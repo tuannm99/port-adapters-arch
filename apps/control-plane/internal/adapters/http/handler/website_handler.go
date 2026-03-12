@@ -4,10 +4,10 @@ import (
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/adapters/http/dto"
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/adapters/http/httpx"
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/application/edgeconfig"
-	websiteapp "github.com/tuannm99/edge-platform/apps/control-plane/internal/application/website"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/adapters/http/dto"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/adapters/http/httpx"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/application/edgeconfig"
+	websiteapp "github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/application/website"
 )
 
 type WebsiteHandler struct {

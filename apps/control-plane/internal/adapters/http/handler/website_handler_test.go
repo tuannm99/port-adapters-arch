@@ -12,10 +12,10 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/adapters/http/handler"
-	edgeconfigmocks "github.com/tuannm99/edge-platform/apps/control-plane/internal/application/edgeconfig/mocks"
-	websiteappmocks "github.com/tuannm99/edge-platform/apps/control-plane/internal/application/website/mocks"
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/domain/website"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/adapters/http/handler"
+	edgeconfigmocks "github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/application/edgeconfig/mocks"
+	websiteappmocks "github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/application/website/mocks"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/domain/website"
 )
 
 func withChiParam(req *http.Request, key, val string) *http.Request {

@@ -6,7 +6,7 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/adapters/http/handler"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/adapters/http/handler"
 )
 
 func New(websiteHandler *handler.WebsiteHandler) http.Handler {

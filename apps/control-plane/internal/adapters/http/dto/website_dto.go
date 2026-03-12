@@ -1,6 +1,6 @@
 package dto
 
-import "github.com/tuannm99/edge-platform/apps/control-plane/internal/domain/website"
+import "github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/domain/website"
 
 type CreateWebsiteRequest struct {
 	Domain   string `json:"domain"`

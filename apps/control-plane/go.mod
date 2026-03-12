@@ -1,4 +1,4 @@
-module github.com/tuannm99/edge-platform/apps/control-plane
+module github.com/tuannm99/port-adapters-arch/apps/control-plane
 
 go 1.25.1
 

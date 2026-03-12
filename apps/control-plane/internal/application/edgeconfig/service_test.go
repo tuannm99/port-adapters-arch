@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/application/edgeconfig"
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/application/edgeconfig/mocks"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/application/edgeconfig"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/application/edgeconfig/mocks"
 )
 
 func TestEdgeService_BuildWebsiteConfig(t *testing.T) {

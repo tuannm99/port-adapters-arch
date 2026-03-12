@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sync"
 
-	websiteapp "github.com/tuannm99/edge-platform/apps/control-plane/internal/application/website"
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/domain/website"
+	websiteapp "github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/application/website"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/domain/website"
 )
 
 var _ websiteapp.Repository = (*WebsiteStore)(nil)

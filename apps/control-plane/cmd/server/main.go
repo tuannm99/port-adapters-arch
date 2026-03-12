@@ -5,12 +5,12 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/adapters/http/handler"
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/adapters/http/router"
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/application/edgeconfig"
-	websiteapp "github.com/tuannm99/edge-platform/apps/control-plane/internal/application/website"
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/infra/nginxconf"
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/infra/store/memory"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/adapters/http/handler"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/adapters/http/router"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/application/edgeconfig"
+	websiteapp "github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/application/website"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/infra/nginxconf"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/infra/store/memory"
 )
 
 func main() {

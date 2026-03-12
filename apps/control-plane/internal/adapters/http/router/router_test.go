@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/adapters/http/handler"
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/adapters/http/router"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/adapters/http/handler"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/adapters/http/router"
 )
 
 func TestNewRouter(t *testing.T) {

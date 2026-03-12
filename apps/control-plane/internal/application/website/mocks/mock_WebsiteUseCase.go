@@ -8,8 +8,8 @@ import (
 	"context"
 
 	mock "github.com/stretchr/testify/mock"
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/application/website"
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/domain/website"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/application/website"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/domain/website"
 )
 
 // NewMockWebsiteUseCase creates a new instance of MockWebsiteUseCase. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.

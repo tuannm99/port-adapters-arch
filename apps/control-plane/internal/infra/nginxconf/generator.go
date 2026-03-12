@@ -5,7 +5,7 @@ import (
 	"context"
 	"text/template"
 
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/application/edgeconfig"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/application/edgeconfig"
 )
 
 var _ edgeconfig.Renderer = (*Generator)(nil)

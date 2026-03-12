@@ -1,7 +1,7 @@
 template: testify
 
 packages:
-  github.com/tuannm99/edge-platform/apps/control-plane/internal/application/website:
+  github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/application/website:
     config:
       dir: '{{.InterfaceDir}}/mocks'
       filename: 'mock_{{.InterfaceName}}.go'
@@ -11,7 +11,7 @@ packages:
       Repository:
       WebsiteUseCase:
 
-  github.com/tuannm99/edge-platform/apps/control-plane/internal/application/edgeconfig:
+  github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/application/edgeconfig:
     config:
       dir: '{{.InterfaceDir}}/mocks'
       filename: 'mock_{{.InterfaceName}}.go'

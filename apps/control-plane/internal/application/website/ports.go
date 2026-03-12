@@ -3,7 +3,7 @@ package websiteapp
 import (
 	"context"
 
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/domain/website"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/domain/website"
 )
 
 type Repository interface {

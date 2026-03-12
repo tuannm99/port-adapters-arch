@@ -6,7 +6,7 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/tuannm99/edge-platform/apps/control-plane/internal/domain/website"
+	"github.com/tuannm99/port-adapters-arch/apps/control-plane/internal/domain/website"
 )
 
 var _ WebsiteUseCase = (*WebsiteService)(nil)
