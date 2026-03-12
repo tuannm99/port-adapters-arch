@@ -1,3 +1,5 @@
+## Hexagonal architecture
+
 ```bash
 go run ./apps/control-plane/cmd/server
 go run ./apps/agent/cmd/agent

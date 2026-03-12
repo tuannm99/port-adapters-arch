@@ -13,7 +13,8 @@ mocks:
 	cd apps/control-plane && mockery --config mockery.yaml
 
 test:
-	cd apps/control-plane && go test ./...
+	go test ./apps/control-plane/... -v -cover
+
 
 tidy:
 	cd apps/control-plane && go mod tidy
